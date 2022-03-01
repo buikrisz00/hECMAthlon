@@ -1,5 +1,5 @@
 getMaxValue = (input) => {
-    return input.split(",").reduce((previousNum, currentNum) => (previousNum > currentNum) ? previousNum : currentNum)
+    return input.split(",").reduce((previousNum, currentNum) => (parseInt(previousNum) > parseInt(currentNum)) ? previousNum : currentNum)
 }
 
-console.log(getMaxValue("10,100,150,200,15,2"));
+console.log(getMaxValue("10,600,5,4000,5000"));
