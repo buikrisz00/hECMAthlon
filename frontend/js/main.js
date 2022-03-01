@@ -10,7 +10,7 @@ class hECMAthlonClass {
             }
         }
         return [maxValue]; */
-        return input.split(",").reduce((previousNum, currentNum) => (parseInt(previousNum) > parseInt(currentNum)) ? previousNum : currentNum)
+        return input.split(",").reduce((previousNum, currentNum) => (parseInt(previousNum) > parseInt(currentNum)) ? parseInt(previousNum) : parseInt(currentNum))
     }
 
     getGreaterThan(input) {
