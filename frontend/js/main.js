@@ -1,15 +1,7 @@
 class hECMAthlonClass {
 
     getMaxValue(input) {
-        const maxValues = input.split(",");
-        let maxValue = 0;
-        for(let i = 0; i < maxValues.length; i++){
-            const tempValue = parseInt(maxValues[i]);
-            if (tempValue > maxValue) {
-                maxValue = tempValue;
-            }
-        }
-        return [maxValue];
+        return input.split(",").reduce((previousNum, currentNum) => (previousNum > currentNum) ? previousNum : currentNum)
     }
 
     getGreaterThan(input) {
