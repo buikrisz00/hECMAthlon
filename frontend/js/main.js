@@ -10,23 +10,15 @@ class hECMAthlonClass {
             }
         }
         return [maxValue]; */
-        return input.split(",").reduce((previousNum, currentNum) => (parseInt(previousNum) > parseInt(currentNum)) ? parseInt(previousNum) : parseInt(currentNum))
+        return input.split(",").reduce((previousNum, currentNum) => (parseInt(previousNum) > parseInt(currentNum)) ? [previousNum] : [currentNum])
     }
 
     getGreaterThan(input) {
-        /* const greaterValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        let greaterNums = [];
-        for(let j = 0; j < greaterValues.length; j++) {
-            if (greaterValues[j] > parseInt(input)) {
-                greaterNums.push(greaterValues[j]);
-            }
-        }
-        return greaterNums; */
         return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].filter(num => num > parseInt(input))
     }
 
     fizzBuzz(input) {
-        let output = [];
+        /* let output = [];
         for (let k = 1; k <= parseInt(input); k++) {
             let value;
             if(k % 5 === 0 && k % 3 === 0) value = "FizzBuzz";
@@ -35,7 +27,19 @@ class hECMAthlonClass {
             else value = k;
             output.push(value);
         }
-        return output;
+        return output; */
+        return Array(parseInt(input)).fill(1).map((num, index) => {
+            if ((index+1) % 5 === 0 && (index+1) % 3 === 0) {
+                return "FizzBuzz";
+            } else if ((index+1) % 5 === 0) {
+                return "Buzz";
+            } else if ((index+1) % 3 === 0) {
+                return "Fizz";
+            } else {
+                num += index;
+                return num;
+            }
+        })
     }
 }
 
