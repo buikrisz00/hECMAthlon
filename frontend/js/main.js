@@ -14,14 +14,15 @@ class hECMAthlonClass {
     }
 
     getGreaterThan(input) {
-        const greaterValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        /* const greaterValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         let greaterNums = [];
         for(let j = 0; j < greaterValues.length; j++) {
             if (greaterValues[j] > parseInt(input)) {
                 greaterNums.push(greaterValues[j]);
             }
         }
-        return greaterNums;
+        return greaterNums; */
+        return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].filter(num => num > parseInt(input))
     }
 
     fizzBuzz(input) {
