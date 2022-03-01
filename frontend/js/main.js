@@ -1,4 +1,4 @@
-class hECMAthlon {
+class hECMAthlonClass {
 
     getMaxValue(input) {
         const maxValues = input.split(",");
@@ -37,4 +37,5 @@ class hECMAthlon {
     }
 }
 
+let hECMAthlon = new hECMAthlonClass();
 export default hECMAthlon;
