@@ -22,6 +22,17 @@ fizzBuzz = (input) => {
     
 }
 
-console.log(getMaxValue("10,600,5,4000,5000"));
+function getOutput(output) {
+    /* let returnValue = ["The function starts"];
+    for(let i = 0; i < output.length; i++){
+        returnValue.push(output[i]);
+    }
+    returnValue.push("The function ends");
+    return returnValue; */
+    return ["The function starts", ...output, "The function ends"]
+}
+
+/* console.log(getMaxValue("10,600,5,4000,5000"));
 console.log(getGreaterThan("8"));
-console.log(fizzBuzz("16"));
+console.log(fizzBuzz("16")); */
+console.log(getOutput([500, 15, 900]));

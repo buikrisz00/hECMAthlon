@@ -1,6 +1,6 @@
 import hECMAthlon from "./main.js"
 
-function init() {
+init = _ => {
     const maxValueBtn = document.querySelector(".maxValue__btn");
     const greaterThanBtn = document.querySelector(".greaterThan__btn");
     const fizzBuzzBtn = document.querySelector(".fizzBuzz__btn");
@@ -27,16 +27,9 @@ function init() {
     });
 }
 
-function getOutput(output) {
-    let returnValue = ["The function starts"];
-    for(let i = 0; i < output.length; i++){
-        returnValue.push(output[i]);
-    }
-    returnValue.push("The function ends");
-    return returnValue;
-}
+getOutput = output => ["The function starts", ...output, "The function ends"] 
 
-function logResult(place, values){
+logResult = (place, values) => {
     while(place.firstChild) {
         place.firstChild.remove();
     }
