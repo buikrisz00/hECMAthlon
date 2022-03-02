@@ -27,9 +27,9 @@ const init = _ => {
     });
 }
 
-getOutput = output => ["The function starts", ...output, "The function ends"] 
+const getOutput = output => ["The function starts", ...output, "The function ends"] 
 
-logResult = (place, values) => {
+const logResult = (place, values) => {
     while(place.firstChild) {
         place.firstChild.remove();
     }
